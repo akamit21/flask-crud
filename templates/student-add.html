@@ -1,0 +1,107 @@
+<!-- base template -->
+{% extends "base.html" %}
+
+<!-- content block -->
+{% block content %}
+<div class="slim-mainpanel">
+  <div class="container">
+    <div class="slim-pageheader">
+      <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Student List</li>
+      </ol>
+      <h6 class="slim-pagetitle">Add Student</h6>
+    </div>
+    <!-- slim-pageheader -->
+
+    <div class="section-wrapper">
+      <label class="section-title">Add Student Form</label>
+      <p class="mg-b-20 mg-sm-b-40">
+        A bordered form group wrapper but the label is in field of the form
+        control.
+      </p>
+
+      <form method="POST" action="">
+        <div class="form-layout form-layout-3">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="name"
+                  placeholder="Enter fullname (required)"
+                />
+              </div>
+            </div>
+            <!-- col-4 -->
+            <div class="col-md-4 mg-t--1 mg-md-t-0">
+              <div class="form-group mg-md-l--1">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="phone"
+                  placeholder="Enter phone no. (required)"
+                />
+              </div>
+            </div>
+            <!-- col-4 -->
+            <div class="col-md-4 mg-t--1 mg-md-t-0">
+              <div class="form-group mg-md-l--1">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="email"
+                  placeholder="Enter email address"
+                />
+              </div>
+            </div>
+            <!-- col-4 -->
+            <div class="col-md-8">
+              <div class="form-group bd-t-0-force">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="address"
+                  placeholder="Enter address"
+                />
+              </div>
+            </div>
+            <!-- col-8 -->
+            <div class="col-md-4">
+              <div class="form-group mg-md-l--1 bd-t-0-force">
+                <select
+                  id="select2-b"
+                  class="form-control"
+                  name="batch"
+                  data-placeholder="Choose class"
+                >
+                  <option label="Choose class"></option>
+                  <option value="1">Class 1</option>
+                  <option value="2">Class 2</option>
+                  <option value="3">Class 3</option>
+                  <option value="4">Class 4</option>
+                </select>
+              </div>
+            </div>
+            <!-- col-4 -->
+          </div>
+          <!-- row -->
+          <div class="form-layout-footer bd pd-20 bd-t-0">
+            <button type="submit" class="btn btn-primary bd-0">
+              Submit Form
+            </button>
+            <button class="btn btn-secondary bd-0">Cancel</button>
+          </div>
+          <!-- form-group -->
+        </div>
+        <!-- form-layout -->
+      </form>
+      <!-- form -->
+    </div>
+    <!-- section-wrapper -->
+  </div>
+  <!-- container -->
+</div>
+<!-- slim-mainpanel -->
+{% endblock %}

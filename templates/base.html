@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Premium Quality and Responsive UI for Dashboard."
+    />
+    <meta name="author" content="ThemePixels" />
+    <title>Slim Responsive Bootstrap 4 Admin Template</title>
+
+    <!-- bootstrap CSS -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    /> -->
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- packages CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'lib/Ionicons/css/ionicons.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'lib/datatables/css/jquery.dataTables.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'lib/select2/css/select2.min.css') }}"
+    />
+
+    <!-- custom CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'css/slim.min.css') }}"
+    />
+  </head>
+  <body>
+    <div class="slim-header">
+      <div class="container">
+        <div class="slim-header-left">
+          <h2 class="slim-logo">
+            <a href="index.html">slim<span>.</span></a>
+          </h2>
+        </div>
+        <!-- slim-header-left -->
+        <div class="slim-header-right">
+          <!-- dropdown -->
+          <div class="dropdown dropdown-c">
+            <a href="#" class="logged-user" data-toggle="dropdown">
+              <img src="http://via.placeholder.com/500x500" alt="" />
+              <span>Katherine</span>
+              <i class="fa fa-angle-down"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <nav class="nav">
+                <a href="page-edit-profile.html" class="nav-link"
+                  ><i class="icon ion-compose"></i> Edit Profile</a
+                >
+                <a href="page-settings.html" class="nav-link"
+                  ><i class="icon ion-ios-gear"></i> Account Settings</a
+                >
+                <a href="page-signin.html" class="nav-link"
+                  ><i class="icon ion-forward"></i> Sign Out</a
+                >
+              </nav>
+            </div>
+            <!-- dropdown-menu -->
+          </div>
+          <!-- dropdown -->
+        </div>
+        <!-- header-right -->
+      </div>
+      <!-- container -->
+    </div>
+    <!-- slim-header -->
+
+    <div class="slim-navbar">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item with-sub">
+            <a class="nav-link" href="#">
+              <i class="icon ion-ios-home-outline"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item with-sub mega-dropdown">
+            <a class="nav-link" href="/add">
+              <i class="icon ion-ios-filing-outline"></i>
+              <span>Add Student</span>
+            </a>
+          </li>
+          <li class="nav-item with-sub">
+            <a class="nav-link" href="#">
+              <i class="icon ion-ios-book-outline"></i>
+              <span>Pages</span>
+            </a>
+          </li>
+          <li class="nav-item with-sub">
+            <a class="nav-link" href="#" data-toggle="dropdown">
+              <i class="icon ion-ios-gear-outline"></i>
+              <span>Forms</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="page-messages.html">
+              <i class="icon ion-ios-chatboxes-outline"></i>
+              <span>Messages</span>
+              <span class="square-8"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="widgets.html">
+              <i class="icon ion-ios-analytics-outline"></i>
+              <span>Widgets</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- container -->
+    </div>
+    <!-- slim-navbar -->
+
+    {% block content %}{% endblock %}
+
+    <div class="slim-footer">
+      <div class="container">
+        <p>
+          Copyright 2018 &copy; All Rights Reserved. Slim Dashboard Template
+        </p>
+        <p>Designed by: <a href="">ThemePixels</a></p>
+      </div>
+      <!-- container -->
+    </div>
+    <!-- slim-footer -->
+
+    <script src="{{ url_for('static', filename = 'lib/jquery/js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'lib/popper.js/js/popper.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'lib/bootstrap/js/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'lib/jquery.cookie/js/jquery.cookie.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'lib/datatables/js/jquery.dataTables.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'lib/datatables-responsive/js/dataTables.responsive.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'lib/select2/js/select2.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename = 'js/slim.js') }}"></script>
+    <script>
+      $(function() {
+        "use strict";
+
+        $("#datatable1").DataTable({
+          responsive: true,
+          language: {
+            searchPlaceholder: "Search...",
+            sSearch: "",
+            lengthMenu: "_MENU_ items/page"
+          }
+        });
+
+        // Select2
+        $(".dataTables_length select").select2({
+          minimumResultsForSearch: Infinity
+        });
+      });
+    </script>
+  </body>
+</html>

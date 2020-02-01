@@ -1,0 +1,35 @@
+<!-- base template -->
+{% extends "base.html" %}
+
+<!-- content block -->
+{% block content %}
+<label class="section-title">Basic Responsive DataTable</label>
+<p class="mg-b-20 mg-sm-b-40">
+  Searching, ordering and paging goodness will be immediately added to the
+  table, as shown in this example.
+</p>
+
+<div class="table-wrapper">
+  <table id="datatable1" class="table display responsive nowrap">
+    <thead>
+      <tr>
+        <th class="wd-15p">First name</th>
+        <th class="wd-15p">Last name</th>
+        <th class="wd-20p">Position</th>
+        <th class="wd-15p">Start date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in students %}
+      <tr>
+        <td>{{row.0}}</td>
+        <td>{{row.1}}</td>
+        <td>{{row.2}}</td>
+        <td>{{row.3}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<!-- table-wrapper -->
+{% endblock %}
